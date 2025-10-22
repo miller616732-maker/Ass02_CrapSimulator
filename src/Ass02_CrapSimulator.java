@@ -17,6 +17,7 @@ public class Ass02_CrapSimulator {
         System.out.println("Rule 3: For all other values, the sum becomes the new goal.");
         System.out.println(" ");
         while (!Valid) {
+            //Roll numbers and check basic outcomes
             rollOne = rand.nextInt(6) + 1;
             rollTwo = rand.nextInt(6) + 1;
             rollSum = (rollOne + rollTwo);
@@ -31,6 +32,7 @@ public class Ass02_CrapSimulator {
                 System.out.println("You Win!");
                 Valid = true;
             } else {
+                //Stating new goal and making new rolls
                 rollGoal = rollSum;
                 System.out.println("The new goal is " + rollGoal + " , continue? [Y/N]");
                     yOrNInput = scan.nextLine();
@@ -54,6 +56,7 @@ public class Ass02_CrapSimulator {
                                 Valid = true;
                             }
                         }
+                        //Checking for incorrect inputs
                     } else if (yOrNInput.equalsIgnoreCase("n")) {
                         System.out.println("Quitter");
                         System.exit(0);
